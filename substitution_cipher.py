@@ -1,15 +1,32 @@
-alphabet = "abcdefghijklmnopqrstuvwxyz "
-key = "qwertyuioplkjhgfdsazxcvbnm "
+alphabet = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRs StTuUvVwWxXyYzZ123456789!@#$%^&*()_+-=,./<>?;:'\"[]{}\\|~`" 
+key = " plmkoijnbhuygvcftrdxsezawqQAZXWSEDCRFVGBTNYJHUMKILOP*&^%$#()-+1236,./<>?;:'\"[]{}\\|~`54789@!=_"
+
+print(len(alphabet))
+print(len(key))
 
 def encrypt(message):
-    pass
+    result = ""
+
+    for letter in message:
+      loc = alphabet.find(letter)
+      result += key[loc]
+
+    return result
 
 def decrypt(message):
-    pass
+    result = ""
+
+    for letter in message:
+      loc = key.find(letter)
+      result += alphabet[loc]
+
+    return result
 
 
-unencrypted_message = "encryption is fun"
+unencrypted_message = "Apples can taste sour \ sweet, but Timmy says that some apples are both sour and sweet! What do you think?"
 encrypted_message = encrypt(unencrypted_message)
+decrypted_message = decrypt(encrypted_message)
 
 print(unencrypted_message)
 print(encrypted_message)
+print(decrypted_message)
