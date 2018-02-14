@@ -22,8 +22,7 @@ def decrypt(message):
 
     return result
 
-
-unencrypted_message = "Apples can taste sour \ sweet, but Timmy says that some apples are both sour and sweet! What do you think?"
+unencrypted_message = "All around me are familiar faces / Worn out places, worn out faces / Bright and early for their daily races / Going nowhere, going nowhere"
 encrypted_message = encrypt(unencrypted_message)
 decrypted_message = decrypt(encrypted_message)
 
